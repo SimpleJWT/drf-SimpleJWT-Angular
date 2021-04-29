@@ -1,0 +1,18 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/server"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: djangorestframework-simplejwt
+    versions:
+    - 4.6.0
+  - dependency-name: django
+    versions:
+    - 3.1.5
+    - 3.1.6
+  - dependency-name: pytz
+    versions:
+    - "2020.5"
